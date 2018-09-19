@@ -1,5 +1,5 @@
 requires = [
     "appdirs",
     "provision_py_proj",
-    "pygame",
+    "kutils4pygame",
 ]
