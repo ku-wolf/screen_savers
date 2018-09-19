@@ -5,8 +5,8 @@ import os
 from pygame import font
 from kutils4pygame import Game, Animation
 import random
-from provision_py_proj.data_and_config_manager import create_data_dir_name
-from screen_savers import pkg_name
+from provision_py_proj.data_and_config_manager import create_data_dir_location
+from screen_savers.pkg_utils import pkg_name
 
 l = 1200
 w = 1600
@@ -125,7 +125,7 @@ class Twitcher(Animation):
     char_height = 10
     char_width = 10
     font_name = "metlrebl.ttf"
-    font_location = os.path.join(create_data_dir_name(pkg_name), font_name)
+    font_location = os.path.join(create_data_dir_location(pkg_name), font_name)
     font = font.Font(font_location, 7)
     font_val_min = 33
     font_val_max = 126
