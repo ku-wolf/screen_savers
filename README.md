@@ -3,9 +3,12 @@
 Uses kutils4pygame to create simple screen savers. Includes Matrix and Line Tracer examples.
 
 # Installation
-clone repo
+clone repo.
+
+```shell
 pip3 install -r requirements.txt
 ./setup.py install
+```
 
 # Usage
 
