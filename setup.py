@@ -9,7 +9,7 @@ from setuptools.command.develop import develop
 from setuptools.command.install import install
 from abstract_requires import requires
 
-pkg_name = "screen_savers"
+pkg_name = "kuw_screen_savers"
 parent_dir = os.path.dirname(os.path.realpath(__file__))
 data_src_dir = pkg_name + "_data"
 config_src_dir = pkg_name + "_config"
@@ -64,21 +64,30 @@ def reset():
     for d in dirnames_to_remove:
         shutil.rmtree(d, ignore_errors=True)
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 def setuptools_setup():
     """Setup provisioner."""
     setup(
         name="screen_savers",
         version="0.1",
-        description="default description",
-        url="default url",
-        author="default author",
-        author_email="default author",
+        description="Simple screen savers built with pygame.",
+        url="https://github.com/ku-wolf/screen_savers",
+        author="Kevin Wolf",
+        author_email="kevinuwolf@gmail.com",
         license="gplv3.txt",
         packages=find_packages(),
         scripts=scripts,
         install_requires=requires,
         setup_requires=requires,
+        long_description=long_description,
+        long_description_content_type="text/markdown",
+        classifiers=[
+            "Programming Language :: Python :: 3",
+            "Operating System :: OS Independent",
+            "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+        ]        
     )
 
 
